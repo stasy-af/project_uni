@@ -1,7 +1,6 @@
 import openpyxl
 words = []
-xlsx_file="словарь для тп.xlsx"
-book = openpyxl.open(xlsx_file,read_only=True)
+book = openpyxl.open("dictionary.xlsx",read_only=True)
 sheet = book.active
 mx= sheet.max_column
 
