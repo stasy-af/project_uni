@@ -7,7 +7,8 @@ mx= sheet.max_column
 for row in range(1,sheet.max_row+1):
     word = sheet[row][0].value
     meaning = sheet[row][1].value
-    words.append((word, meaning))
+    link = sheet[row][2].value
+    words.append((word, meaning, link)) 
 
-while (None, None) in words :
-    words.remove((None, None))
+while (None, None, None) in words :
+    words.remove((None, None, None))
