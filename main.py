@@ -4,6 +4,7 @@ from handlers import router
 
 
 BOT_TOKEN='7581394986:AAG23-Xq_TVi1n-4KpFyCyyoh87vR3YqSmA'
+bot = Bot(token=BOT_TOKEN)
 
 async def main():
     bot = Bot(token=BOT_TOKEN)
