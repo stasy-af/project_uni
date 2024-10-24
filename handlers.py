@@ -5,7 +5,7 @@ from our_words import words
 
 router = Router()
 
-
+from main import bot 
 
 @router.message(CommandStart())
 async def cmd_start(message: Message):
@@ -20,6 +20,7 @@ async def resque_word(message: Message):
     for stroka in words:
         if request_word==stroka[0]:
             await message.answer(stroka[1])
+            await bot.send_photo(chat_id = message.chat.id, photo = stroka[2])
             ans_was=1
             
     if ans_was == 0:
